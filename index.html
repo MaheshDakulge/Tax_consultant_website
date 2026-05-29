@@ -17,595 +17,738 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo" id="logo-brand">
-                <span class="logo-main">Jinke & Associates</span>
-                <span class="logo-sub">Tax Consultant</span>
-            </a>
+    <div class="page-wrapper">
+        <!-- Navigation Header Bar -->
+        <header class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo-wrap" id="logo-brand">
+                    <!-- Premium Inline SVG Logo Mark matching Protax styling -->
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">Jinke & Associates</span>
+                        <span class="logo-sub">Tax Consultant</span>
+                    </div>
+                </a>
 
-            <!-- Hamburger Button for Mobile -->
-            <button class="hamburger" aria-label="Toggle navigation drawer">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+                <!-- Hamburger Button for Mobile -->
+                <button class="hamburger" aria-label="Toggle navigation drawer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
 
-            <!-- Navigation Links & Dropdowns -->
-            <nav class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#hero" class="nav-item active">Home</a></li>
-                    <li><a href="#about" class="nav-item">About Us</a></li>
-                    <li><a href="#services" class="nav-item">Services</a></li>
-                    
-                    <!-- Knowledge Bank Mega Menu Dropdown -->
-                    <li class="dropdown-trigger">
-                        <a href="#" class="nav-item" id="kb-dropdown-btn">Knowledge Bank <i class="fa-solid fa-chevron-down"></i></a>
-                        <div class="mega-menu">
-                            <div class="mega-grid">
-                                <div class="mega-column">
-                                    <h4><i class="fa-solid fa-calculator"></i> Calculators</h4>
-                                    <ul>
-                                        <li><a href="#">GST MRP Calculator</a></li>
-                                        <li><a href="#">GST Rate Calculator</a></li>
-                                        <li><a href="#">GST Calculator</a></li>
-                                        <li><a href="#">Tax Calculator</a></li>
-                                        <li><a href="#">TDS Calculator</a></li>
-                                        <li><a href="#">Net Profit Calculator</a></li>
-                                        <li><a href="#">Net Worth Calculator</a></li>
-                                        <li><a href="#">Other (HRA, NSC, EMI, Auto, Home, RERA)</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-column">
-                                    <h4><i class="fa-solid fa-square-rss"></i> Bulletins</h4>
-                                    <ul>
-                                        <li><a href="#">RBI SEBI Bulletins</a></li>
-                                        <li><a href="#">Income Tax Updates</a></li>
-                                        <li><a href="#">GST & Service Tax</a></li>
-                                        <li><a href="#">Company Law Bulletins</a></li>
-                                        <li><a href="#">Labour Laws Updates</a></li>
-                                        <li><a href="#">FEMA Bulletins</a></li>
-                                        <li><a href="#">IGST & UTGST News</a></li>
-                                        <li><a href="#">IBC Regulation & INDAS</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-column">
-                                    <h4><i class="fa-solid fa-wrench"></i> Utilities</h4>
-                                    <ul>
-                                        <li><a href="#">Rates of TDS</a></li>
-                                        <li><a href="#">Income Tax Rates</a></li>
-                                        <li><a href="#">Depreciation Rates</a></li>
-                                        <li><a href="#">ROC Fees Structure</a></li>
-                                        <li><a href="#">Cost Inflation Index</a></li>
-                                        <li><a href="#">IFSC & MICR Codes</a></li>
-                                        <li><a href="#">Gold & Silver Rates</a></li>
-                                        <li><a href="#">HSN Rate List & Stamp Duty</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-column">
-                                    <h4><i class="fa-solid fa-scale-balanced"></i> Acts</h4>
-                                    <ul>
-                                        <li><a href="#">Income Tax Act</a></li>
-                                        <li><a href="#">Companies Act 2013</a></li>
-                                        <li><a href="#">LLP & SEBI Act</a></li>
-                                        <li><a href="#">CGST & IGST Act 2017</a></li>
-                                        <li><a href="#">FEMA 1999</a></li>
-                                        <li><a href="#">RERA 2016 / MahaRERA</a></li>
-                                        <li><a href="#">Insolvency & Bankruptcy Code</a></li>
-                                    </ul>
-                                </div>
-                                <div class="mega-column">
-                                    <h4><i class="fa-solid fa-file-invoice"></i> Forms</h4>
-                                    <ul>
-                                        <li><a href="#">Income Tax Forms</a></li>
-                                        <li><a href="#">ROC Forms</a></li>
-                                        <li><a href="#">GST Forms</a></li>
-                                        <li><a href="#">LLP Forms</a></li>
-                                        <li><a href="#">FEMA Forms</a></li>
-                                        <li><a href="#">Wealth Tax Forms</a></li>
-                                    </ul>
+                <!-- Navigation Links & Mega Menu Dropdown -->
+                <nav class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="#hero" class="nav-item active">Home</a></li>
+                        <li><a href="#about" class="nav-item">About Us</a></li>
+                        
+                        <!-- Services Dropdown (Linked to sections) -->
+                        <li><a href="#services" class="nav-item">Service</a></li>
+                        
+                        <!-- Knowledge Bank Mega Menu -->
+                        <li class="dropdown-trigger">
+                            <a href="#" class="nav-item" id="kb-dropdown-btn">Knowledge Bank <i class="fa-solid fa-chevron-down"></i></a>
+                            <div class="mega-menu">
+                                <div class="mega-grid">
+                                    <div class="mega-column">
+                                        <h4><i class="fa-solid fa-calculator"></i> Calculators</h4>
+                                        <ul>
+                                            <li><a href="#">GST MRP Calculator</a></li>
+                                            <li><a href="#">GST Rate Calculator</a></li>
+                                            <li><a href="#">GST Calculator</a></li>
+                                            <li><a href="#">Tax Calculator</a></li>
+                                            <li><a href="#">TDS Calculator</a></li>
+                                            <li><a href="#">Net Profit Calculator</a></li>
+                                            <li><a href="#">Net Worth Calculator</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4><i class="fa-solid fa-square-rss"></i> Bulletins</h4>
+                                        <ul>
+                                            <li><a href="#">RBI SEBI Bulletins</a></li>
+                                            <li><a href="#">Income Tax Updates</a></li>
+                                            <li><a href="#">GST & Service Tax</a></li>
+                                            <li><a href="#">Company Law Bulletins</a></li>
+                                            <li><a href="#">Labour Laws Updates</a></li>
+                                            <li><a href="#">FEMA Bulletins</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4><i class="fa-solid fa-wrench"></i> Utilities</h4>
+                                        <ul>
+                                            <li><a href="#">Rates of TDS</a></li>
+                                            <li><a href="#">Income Tax Rates</a></li>
+                                            <li><a href="#">Depreciation Rates</a></li>
+                                            <li><a href="#">ROC Fees Structure</a></li>
+                                            <li><a href="#">Cost Inflation Index</a></li>
+                                            <li><a href="#">Gold & Silver Rates</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4><i class="fa-solid fa-scale-balanced"></i> Acts</h4>
+                                        <ul>
+                                            <li><a href="#">Income Tax Act</a></li>
+                                            <li><a href="#">Companies Act 2013</a></li>
+                                            <li><a href="#">LLP & SEBI Act</a></li>
+                                            <li><a href="#">CGST & IGST Act 2017</a></li>
+                                            <li><a href="#">FEMA 1999</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="mega-column">
+                                        <h4><i class="fa-solid fa-file-invoice"></i> Forms</h4>
+                                        <ul>
+                                            <li><a href="#">Income Tax Forms</a></li>
+                                            <li><a href="#">ROC Forms</a></li>
+                                            <li><a href="#">GST Forms</a></li>
+                                            <li><a href="#">LLP Forms</a></li>
+                                            <li><a href="#">FEMA Forms</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
 
-                    <li><a href="#testimonials" class="nav-item">Testimonials</a></li>
-                    <li><a href="#faq" class="nav-item">FAQ</a></li>
-                    <li><a href="#contact" class="nav-item">Contact</a></li>
-                </ul>
-            </nav>
+                        <li><a href="#testimonials" class="nav-item">Testimonials</a></li>
+                        <li><a href="#faq" class="nav-item">FAQ</a></li>
+                        <li><a href="#contact" class="nav-item">Contact</a></li>
+                    </ul>
+                </nav>
 
-            <!-- Book Consultation CTA -->
-            <div class="nav-cta">
-                <a href="#contact" class="btn btn-navy" id="nav-cta-btn">Book Consultation</a>
+                <!-- Book Consultation Pill CTA -->
+                <div class="nav-cta">
+                    <a href="#contact" class="btn btn-navy" id="nav-cta-btn">Schedule a Call</a>
+                </div>
             </div>
+        </header>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="nav-drawer">
+            <ul class="drawer-links">
+                <li><a href="#hero" class="drawer-item active">Home</a></li>
+                <li><a href="#about" class="drawer-item">About Us</a></li>
+                <li><a href="#services" class="drawer-item">Service</a></li>
+                <li><a href="#" class="drawer-item mobile-dropdown-btn">Knowledge Bank <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="mobile-mega-menu">
+                        <li><a href="#">Calculators</a></li>
+                        <li><a href="#">Bulletins</a></li>
+                        <li><a href="#">Utilities</a></li>
+                        <li><a href="#">Acts</a></li>
+                        <li><a href="#">Forms</a></li>
+                    </ul>
+                </li>
+                <li><a href="#testimonials" class="drawer-item">Testimonials</a></li>
+                <li><a href="#faq" class="drawer-item">FAQ</a></li>
+                <li><a href="#contact" class="drawer-item">Contact</a></li>
+                <li class="drawer-cta-li"><a href="#contact" class="btn btn-navy btn-block">Schedule a Call</a></li>
+            </ul>
         </div>
-    </header>
 
-    <!-- Mobile Navigation Drawer -->
-    <div class="nav-drawer">
-        <ul class="drawer-links">
-            <li><a href="#hero" class="drawer-item active">Home</a></li>
-            <li><a href="#about" class="drawer-item">About Us</a></li>
-            <li><a href="#services" class="drawer-item">Services</a></li>
-            <li><a href="#" class="drawer-item mobile-dropdown-btn">Knowledge Bank <i class="fa-solid fa-chevron-down"></i></a>
-                <ul class="mobile-mega-menu">
-                    <li><a href="#">Calculators</a></li>
-                    <li><a href="#">Bulletins</a></li>
-                    <li><a href="#">Utilities</a></li>
-                    <li><a href="#">Acts</a></li>
-                    <li><a href="#">Forms</a></li>
-                </ul>
-            </li>
-            <li><a href="#testimonials" class="drawer-item">Testimonials</a></li>
-            <li><a href="#faq" class="drawer-item">FAQ</a></li>
-            <li><a href="#contact" class="drawer-item">Contact</a></li>
-            <li class="drawer-cta-li"><a href="#contact" class="btn btn-navy btn-block">Book Consultation</a></li>
-        </ul>
-    </div>
+        <!-- Main Body Content -->
+        <main>
+            <!-- Hero Wrapper (Inset Rounded Card) -->
+            <div class="hero-wrapper" id="hero">
+                <section class="hero-inset-card" style="background-image: linear-gradient(rgba(15, 28, 46, 0.45), rgba(15, 28, 46, 0.65)), url('images/hero_bg.jpg');">
+                    <!-- Hero Top Badge Line -->
+                    <div class="hero-badge-row">
+                        <span class="hero-badge">Since 2020</span>
+                        <span class="hero-badge hero-badge-white">Your Partner In Tax Clarity</span>
+                        <a href="#about" class="hero-badge hero-badge-link">Behind the Expertise <i class="fa-solid fa-arrow-right-long" style="margin-left:6px;"></i></a>
+                    </div>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero" style="background-image: linear-gradient(rgba(15, 28, 46, 0.75), rgba(15, 28, 46, 0.85)), url('images/hero_bg.jpg');">
-            <div class="hero-container hero-reveal">
-                <h1 class="hero-title">
-                    Taxes, Handled with <br>
-                    <span class="serif-italic">Precision</span> and Peace of Mind.
-                </h1>
-                
-                <p class="hero-subtext">
-                    Smart, compliant and stress-free tax and financial solutions for your business or personal needs.
-                </p>
-
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-white-pill">Book Consultation</a>
-                </div>
-            </div>
-            
-            <a href="#about" class="scroll-arrow" aria-label="Scroll down to About Us section">
-                <i class="fa-solid fa-arrow-down-long"></i>
-            </a>
-        </section>
-
-        <!-- About Us Section (White BG) -->
-        <section id="about" class="about reveal">
-            <div class="section-container">
-                <div class="about-grid">
-                    <!-- Left: Description and Details -->
-                    <div class="about-content">
-                        <span class="section-tag">[ ✕ ] About Us</span>
-                        <h2 class="section-title">Trusted CA advisors for modern businesses.</h2>
-                        <p class="section-body">
-                            Jinke & Associates is a chartered accountancy firm rendering comprehensive professional services which include audit, management consultancy, tax consultancy, accounting services, manpower management, and secretarial services. The firm represents a combination of specialized skills, geared to offer sound financial advice and personalized proactive services.
+                    <!-- Center Headline content -->
+                    <div class="hero-container hero-reveal">
+                        <h1 class="hero-title">
+                            Taxes, Handled with <br>
+                            <span class="serif-italic">Precision</span> and Peace of Mind.
+                        </h1>
+                        <p class="hero-subtext">
+                            Smart, compliant and stress-free tax and financial solutions for your business or personal needs.
                         </p>
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-white-pill">Book Consultation</a>
+                        </div>
                     </div>
 
-                    <!-- Right: Stats Panel -->
-                    <div class="stats-panel">
-                        <div class="stat-box" data-delay="0.1s">
-                            <span class="stat-number number-animate" data-target="250" data-suffix="+">0</span>
-                            <span class="stat-label">Clients Served</span>
+                    <!-- Hero Footer Line -->
+                    <div class="hero-footer-row">
+                        <div class="hero-bottom-badges">
+                            <span class="hero-badge">Legal</span>
+                            <span class="hero-badge">Accurate</span>
+                            <span class="hero-badge">On Time</span>
                         </div>
-                        <div class="stat-box" data-delay="0.2s">
-                            <span class="stat-number number-animate" data-target="98" data-suffix="%">0</span>
-                            <span class="stat-label">Retention Rate</span>
-                        </div>
-                        <div class="stat-box" data-delay="0.3s">
-                            <span class="stat-number">&lt;24H</span>
-                            <span class="stat-label">Response Time</span>
-                        </div>
+                        <a href="#about" class="scroll-indicator-new" aria-label="Scroll down to About Us section">
+                            Get Started <i class="fa-solid fa-arrow-down-long"></i>
+                        </a>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
 
-        <!-- Services Section (Dark Navy BG) -->
-        <section id="services" class="services reveal">
-            <div class="section-container">
-                <div class="services-header text-center">
-                    <span class="section-tag tag-white">[ ✕ ] Our Services</span>
-                    <h2 class="section-title text-white">End-to-end financial solutions tailored for individuals and businesses.</h2>
-                </div>
-
-                <div class="services-grid">
-                    <!-- Service 01 -->
-                    <article class="service-card" data-delay="0.05s">
-                        <span class="service-number">01</span>
-                        <div class="service-header-row">
-                            <h3 class="service-title">Audit Services</h3>
-                            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i>
-                        </div>
-                        <p class="service-desc">Statutory Audit, Internal Audit, Operational & Management Audit.</p>
-                        <p class="service-details">Get expert audit opinion on your financial statements. We verify, assess, and ensure full regulatory compliance.</p>
-                        <ul class="service-bullets">
-                            <li>Statutory & Internal Audit</li>
-                            <li>Management & Operational Audit</li>
-                            <li>Compliance & Risk Assessment</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 02 -->
-                    <article class="service-card" data-delay="0.1s">
-                        <span class="service-number">02</span>
-                        <div class="service-header-row">
-                            <h3 class="service-title">Tax Consultancy</h3>
-                            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i>
-                        </div>
-                        <p class="service-desc">Direct & Indirect Tax Law, GST, Income Tax Advisory.</p>
-                        <p class="service-details">Get expert advice on personal and corporate tax matters — clear, actionable, and compliance-first.</p>
-                        <ul class="service-bullets">
-                            <li>Personal & corporate tax analysis</li>
-                            <li>Legal tax advice</li>
-                            <li>Tax issue troubleshooting</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 03 -->
-                    <article class="service-card" data-delay="0.15s">
-                        <span class="service-number">03</span>
-                        <div class="service-header-row">
-                            <h3 class="service-title">Project Planning & Financing</h3>
-                            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i>
-                        </div>
-                        <p class="service-desc">Financial Planning and Management, Project Financing.</p>
-                        <p class="service-details">Structured financial planning to help businesses grow, manage capital, and achieve their goals.</p>
-                        <ul class="service-bullets">
-                            <li>Business financial planning</li>
-                            <li>Capital and investment structuring</li>
-                            <li>Management reporting</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 04 -->
-                    <article class="service-card" data-delay="0.2s">
-                        <span class="service-number">04</span>
-                        <div class="service-header-row">
-                            <h3 class="service-title">Due Diligence & Company Formation</h3>
-                            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i>
-                        </div>
-                        <p class="service-desc">Due Diligence Review, Accounting Functions, Company Formation.</p>
-                        <p class="service-details">We help you set up, structure, and validate businesses with complete legal and financial due diligence.</p>
-                        <ul class="service-bullets">
-                            <li>Company incorporation</li>
-                            <li>Due diligence review</li>
-                            <li>Accounting & bookkeeping</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 05 -->
-                    <article class="service-card" data-delay="0.25s">
-                        <span class="service-number">05</span>
-                        <div class="service-header-row">
-                            <h3 class="service-title">Business & Company Law</h3>
-                            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i>
-                        </div>
-                        <p class="service-desc">Company Law, Business Law, Direct & Indirect Tax Law.</p>
-                        <p class="service-details">Expert advisory on corporate legal compliance, company secretarial services, and regulatory filings.</p>
-                        <ul class="service-bullets">
-                            <li>Secretarial services</li>
-                            <li>ROC & MCA filings</li>
-                            <li>Legal compliance review</li>
-                        </ul>
-                    </article>
-
-                    <!-- Service 06 -->
-                    <article class="service-card" data-delay="0.3s">
-                        <span class="service-number">06</span>
-                        <div class="service-header-row">
-                            <h3 class="service-title">Investment Schemes</h3>
-                            <i class="fa-solid fa-arrow-up-right-from-square service-arrow"></i>
-                        </div>
-                        <p class="service-desc">Other Legal Matters w.r.t. Corporate and Allied Laws.</p>
-                        <p class="service-details">Guidance on investment instruments, legal structures, and schemes suited to your financial goals.</p>
-                        <ul class="service-bullets">
-                            <li>Investment advisory</li>
-                            <li>Legal structure planning</li>
-                            <li>Scheme compliance</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us Section (White BG) -->
-        <section id="why-choose-us" class="why-choose reveal">
-            <div class="section-container">
-                <div class="why-grid">
-                    <!-- Left column: Text + Callout Card -->
-                    <div class="why-content">
-                        <span class="section-tag">[ ✕ ] Why Choose Us</span>
-                        <h2 class="section-title">The smart choice for stress-free financial solutions.</h2>
-                        
-                        <div class="callout-card">
-                            <h3 class="callout-title">Certified CA Professionals</h3>
-                            <p class="callout-sub">Handled by chartered accountants with deep knowledge of local and international tax regulations.</p>
-                            <a href="#contact" class="btn btn-navy-small">Meet Our Experts</a>
-                        </div>
-                    </div>
-
-                    <!-- Right column: Team Image + Highlights -->
-                    <div class="why-visuals">
-                        <div class="image-wrapper">
-                            <img src="images/team_collaboration.jpg" alt="Chartered Accountants working together in office" class="team-photo">
-                        </div>
-                        
-                        <div class="highlights-list">
-                            <div class="highlight-item" data-delay="0.1s">
-                                <span class="highlight-bullet"><i class="fa-solid fa-check"></i></span>
-                                <div class="highlight-text">
-                                    <strong>Proven Track Record</strong>
-                                    <p>Trusted by hundreds of clients: Individuals, SMEs, and corporations — with measurable results. (Over 500+ clients served)</p>
-                                </div>
+            <!-- About Us Section (Soft Cream BG) -->
+            <section id="about" class="about reveal">
+                <div class="section-container">
+                    <div class="about-grid">
+                        <!-- Left Column: Visual & Paragraphs -->
+                        <div class="about-left">
+                            <span class="section-tag">
+                                <span class="section-tag-cross"><i class="fa-solid fa-xmark"></i></span> About Us
+                            </span>
+                            <div class="about-img-box" data-delay="0.1s">
+                                <img src="images/about_bg.jpg" alt="Chartered Accountants review tax documents and tax ledger">
                             </div>
-                            <div class="highlight-item" data-delay="0.2s">
-                                <span class="highlight-bullet"><i class="fa-solid fa-check"></i></span>
-                                <div class="highlight-text">
-                                    <strong>Tailored Tax Strategies</strong>
-                                    <p>Customized financial plans aligned to business goals — no one-size-fits-all approach. (95% of our clients add new services within 1 year)</p>
+                            <p class="about-description" data-delay="0.15s">
+                                Jinke & Associates is a team of certified tax consultants dedicated to helping individuals, freelancers, and companies navigate tax complexity with clarity. With a client-first approach, we deliver tailored strategies that go beyond compliance — we help you grow smarter.
+                            </p>
+                        </div>
+
+                        <!-- Right Column: Title & Vertical Stats Stack -->
+                        <div class="about-right">
+                            <h2 class="section-title">Trusted tax advisors for modern businesses.</h2>
+                            
+                            <div class="stats-vertical-stack">
+                                <!-- Stat Item 1 -->
+                                <div class="stat-item-stacked" data-delay="0.1s">
+                                    <span class="stat-number-large number-animate" data-target="250" data-suffix="+">0</span>
+                                    <span class="stat-label-large">Clients Served</span>
+                                </div>
+                                <!-- Stat Item 2 -->
+                                <div class="stat-item-stacked" data-delay="0.2s">
+                                    <span class="stat-number-large number-animate" data-target="98" data-suffix="%">0</span>
+                                    <span class="stat-label-large">Retention Rate</span>
+                                </div>
+                                <!-- Stat Item 3 -->
+                                <div class="stat-item-stacked" data-delay="0.3s">
+                                    <span class="stat-number-large">&lt;24H</span>
+                                    <span class="stat-label-large">Response Time</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- How It Works Section (Dark Navy BG) -->
-        <section id="how-it-works" class="how-works reveal">
-            <div class="section-container">
-                <div class="how-header text-center">
-                    <span class="section-tag tag-white">[ ✕ ] How It Works</span>
-                    <h2 class="section-title text-white">Simple steps to solve complex financial matters.</h2>
-                </div>
-
-                <!-- 4 Step Row -->
-                <div class="steps-row">
-                    <!-- Step 1 -->
-                    <div class="step-card" data-delay="0.05s">
-                        <div class="step-icon-row">
-                            <span class="step-icon"><i class="fa-regular fa-comments"></i></span>
-                            <span class="step-badge">01</span>
-                        </div>
-                        <h3 class="step-title">Initial Consultation</h3>
-                        <p class="step-desc">Free consultation to discuss your needs and map out business requirements.</p>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="step-card" data-delay="0.1s">
-                        <div class="step-icon-row">
-                            <span class="step-icon"><i class="fa-regular fa-folder-open"></i></span>
-                            <span class="step-badge">02</span>
-                        </div>
-                        <h3 class="step-title">Send Documents</h3>
-                        <p class="step-desc">Securely share your tax records, books, and legal files for analysis.</p>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="step-card" data-delay="0.15s">
-                        <div class="step-icon-row">
-                            <span class="step-icon"><i class="fa-solid fa-gears"></i></span>
-                            <span class="step-badge">03</span>
-                        </div>
-                        <h3 class="step-title">We Handle the Process</h3>
-                        <p class="step-desc">End-to-end handling of your audits, reporting filings, and local compliances.</p>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="step-card" data-delay="0.2s">
-                        <div class="step-icon-row">
-                            <span class="step-icon"><i class="fa-regular fa-circle-check"></i></span>
-                            <span class="step-badge">04</span>
-                        </div>
-                        <h3 class="step-title">Get Ongoing Support</h3>
-                        <p class="step-desc">Stay connected with our experts as your enterprise expands and scales.</p>
-                    </div>
-                </div>
-
-                <!-- Animated Progress Line at Bottom -->
-                <div class="progress-line-container">
-                    <div class="progress-line-fill" id="progress-bar"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section (White BG) -->
-        <section id="testimonials" class="testimonials reveal">
-            <div class="section-container">
-                <div class="testimonials-header text-center">
-                    <span class="section-tag">[ ✕ ] Testimonials</span>
-                    <h2 class="section-title">Real stories from businesses and individuals we've helped.</h2>
-                </div>
-
-                <div class="testimonial-single-wrapper">
-                    <blockquote class="testimonial-card">
-                        <span class="quote-mark-top"><i class="fa-solid fa-quote-left"></i></span>
-                        
-                        <p class="quote-text">
-                            "Their tax planning gave us complete clarity and saved us significantly. The advice wasn't just compliance — it was strategic and growth-oriented."
-                        </p>
-
-                        <div class="quote-footer">
-                            <div class="avatar-box">
-                                <img src="images/testimonial_avatar.jpg" alt="Client SME Owner profile picture" class="avatar-img">
-                            </div>
-                            <div class="quote-author-info">
-                                <cite class="author-name">Client</cite>
-                                <span class="author-role">Nanded-based SME Owner</span>
-                            </div>
-                        </div>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section (Dark Navy BG) -->
-        <section id="faq" class="faq reveal">
-            <div class="section-container">
-                <div class="faq-grid">
-                    <!-- Left: Tag, Title & Illustration bg -->
-                    <div class="faq-intro">
-                        <span class="section-tag tag-white">[ ✕ ] FAQ</span>
-                        <h2 class="section-title text-white">Still have questions?<br>We've got answers.</h2>
-                        <p class="faq-intro-text">
-                            Find clear, quick answers to common questions about our corporate auditing, local GST taxes, legal secretarial consulting, and project investment structures.
-                        </p>
-                        <div class="faq-cta-btn-wrap">
-                            <a href="#contact" class="btn btn-white-pill">Ask a Different Query</a>
-                        </div>
-                    </div>
-
-                    <!-- Right: FAQ Accordions -->
-                    <div class="faq-accordion-group">
-                        <!-- FAQ Item 1 -->
-                        <div class="faq-item open">
-                            <button class="faq-question">
-                                <span>Who needs CA consulting services?</span>
-                                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Individuals with complex finances, freelancers, SMEs, and corporations benefit from balanced tax strategies and consultancy support.</p>
+            <!-- Why Choose Us Section (White/Soft Cream Grid) -->
+            <section id="why-choose-us" class="why-choose reveal">
+                <div class="section-container">
+                    <div class="why-grid">
+                        <!-- Left Column: Intro + Main Dark Badge Box -->
+                        <div class="why-left">
+                            <span class="section-tag">
+                                <span class="section-tag-cross"><i class="fa-solid fa-xmark"></i></span> Why Choose Us
+                            </span>
+                            <h2 class="section-title">The smart choice for stress-free tax solutions.</h2>
+                            
+                            <!-- Large Navy Featured Card -->
+                            <div class="why-navy-card" data-delay="0.1s">
+                                <h3><i class="fa-solid fa-shield-halved"></i> Certified Tax Professionals</h3>
+                                <p>
+                                    Handled by licensed experts with deep knowledge of local and international tax regulations. Our chartered accountants stay updated with changing tax reforms to keep your enterprise fully protected and highly efficient.
+                                </p>
+                                <div class="expert-avatar-row">
+                                    <div class="avatar-group">
+                                        <img src="images/testimonial_avatar.jpg" alt="Advisor profile 1">
+                                        <img src="images/service_1.jpg" alt="Advisor profile 2">
+                                        <img src="images/service_2.jpg" alt="Advisor profile 3">
+                                        <span class="avatar-count-badge">20+</span>
+                                    </div>
+                                    <a href="#contact" class="expert-link">Meet Our Experts <i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- FAQ Item 2 -->
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span>Is my financial information kept confidential?</span>
-                                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Yes. All client information is strictly confidential and handled under professional ethics and legal obligations.</p>
+                        <!-- Right Column: Visual and Sub-Grid Stats Cards -->
+                        <div class="why-right">
+                            <div class="why-img-box" data-delay="0.15s">
+                                <img src="images/team_collaboration.jpg" alt="Jinke & Associates tax advisors collaborating on business audit reviews">
                             </div>
-                        </div>
 
-                        <!-- FAQ Item 3 -->
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span>Can you help with tax audits or disputes?</span>
-                                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Absolutely. We represent clients in tax audits, assessments, and dispute resolution before relevant authorities.</p>
-                            </div>
-                        </div>
+                            <div class="why-sub-grid">
+                                <!-- Sub Card 1 -->
+                                <div class="why-sub-card" data-delay="0.2s">
+                                    <div>
+                                        <h4><i class="fa-solid fa-circle-check"></i> Proven Track Record</h4>
+                                        <p>Trusted by hundreds of clients—individuals, SMEs, and corporations—with measurable results.</p>
+                                    </div>
+                                    <div class="sub-card-footer">
+                                        <span class="sub-card-stats-text">Over 500+ served</span>
+                                        <span class="rating-stars">4.9/5 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                </div>
 
-                        <!-- FAQ Item 4 -->
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span>What documents do I need to prepare?</span>
-                                <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Typically PAN, Aadhaar, bank statements, previous ITR, business registration documents (if applicable). We guide you step by step.</p>
+                                <!-- Sub Card 2 -->
+                                <div class="why-sub-card" data-delay="0.25s">
+                                    <div>
+                                        <h4><i class="fa-solid fa-compass-drafting"></i> Tailored Tax Strategies</h4>
+                                        <p>We customize solutions to fit your personal or business goals—no one-size-fits-all approach.</p>
+                                    </div>
+                                    <div class="sub-card-footer">
+                                        <span class="efficiency-badge"><i class="fa-solid fa-chart-line"></i> Successful +20%</span>
+                                        <span class="sub-card-stats-text" style="font-size:10px;">95% saw savings</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Contact Section (White BG) -->
-        <section id="contact" class="contact reveal">
-            <div class="section-container">
-                <div class="contact-grid">
-                    <!-- Left: Header Details -->
-                    <div class="contact-info">
-                        <span class="section-tag">[ ✕ ] Contact</span>
-                        <h2 class="section-title">Let's Talk Finance.</h2>
-                        <p class="contact-sub">Quick form — no long processes.</p>
-                        
-                        <div class="contact-details">
-                            <div class="contact-card-item">
-                                <span class="icon-circle"><i class="fa-solid fa-envelope"></i></span>
-                                <div class="card-details-text">
-                                    <strong>Send Us a Query</strong>
+            <!-- Services Section (Interactive Showcase tabs) -->
+            <section id="services" class="services reveal">
+                <div class="section-container">
+                    <div class="text-center">
+                        <span class="section-tag">
+                            <span class="section-tag-cross"><i class="fa-solid fa-xmark"></i></span> Our Service
+                        </span>
+                        <h2 class="section-title title-center">End-to-end tax solutions tailored for individuals and businesses.</h2>
+                    </div>
+
+                    <!-- Interactive Showcase Layout Grid -->
+                    <div class="services-showcase">
+                        <!-- Left Side: Interactive Advisor Card Overlay over Selected Service Image -->
+                        <div class="service-preview-panel" data-delay="0.1s">
+                            <div class="service-preview-card">
+                                <img src="images/service_1.jpg" alt="Active selected Service representation" class="service-preview-img" id="service-preview-img">
+                                <div class="service-preview-overlay">
+                                    <div class="preview-advisor-info">
+                                        <span class="preview-advisor-name" id="preview-advisor-name">J. R. Jinke</span>
+                                        <span class="preview-advisor-title" id="preview-advisor-title">Senior Audit Partner</span>
+                                    </div>
+                                    <a href="#contact" class="btn btn-navy preview-advisor-btn">Schedule a Call</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Service Vertical Tabs -->
+                        <div class="service-tabs-panel" data-delay="0.15s">
+                            <!-- Service Tab 01 (Active initially) -->
+                            <div class="service-tab-item active" data-index="0" data-image="images/service_1.jpg" data-name="J. R. Jinke" data-title="Senior Audit Partner">
+                                <div class="tab-header-row">
+                                    <div class="tab-title-wrap">
+                                        <span class="tab-number">01</span>
+                                        <span class="tab-title">Audit Services</span>
+                                    </div>
+                                    <span class="tab-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                                <div class="tab-detail-content">
+                                    <p class="tab-detail-desc">
+                                        Get expert audit opinions on your corporate financial registers. We verify, assess risks, and ensure full statutory accounting compliances.
+                                    </p>
+                                    <ul class="tab-detail-bullets">
+                                        <li><i class="fa-regular fa-circle-check"></i> Statutory & Internal Audits</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Management Auditing</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Compliance Reviews</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Service Tab 02 -->
+                            <div class="service-tab-item" data-index="1" data-image="images/service_2.jpg" data-name="A. S. Kalani" data-title="Senior Tax Advisor">
+                                <div class="tab-header-row">
+                                    <div class="tab-title-wrap">
+                                        <span class="tab-number">02</span>
+                                        <span class="tab-title">Tax Consultancy</span>
+                                    </div>
+                                    <span class="tab-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                                <div class="tab-detail-content">
+                                    <p class="tab-detail-desc">
+                                        Get professional, compliance-first advisory on personal tax planning and corporate direct and indirect legal tax matrices.
+                                    </p>
+                                    <ul class="tab-detail-bullets">
+                                        <li><i class="fa-regular fa-circle-check"></i> GST Return Filings</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Income Tax Planning</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Corporate Tax Audits</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Service Tab 03 -->
+                            <div class="service-tab-item" data-index="2" data-image="images/service_3.jpg" data-name="N. M. Rao" data-title="Project Finance Chief">
+                                <div class="tab-header-row">
+                                    <div class="tab-title-wrap">
+                                        <span class="tab-number">03</span>
+                                        <span class="tab-title">Project Planning & Financing</span>
+                                    </div>
+                                    <span class="tab-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                                <div class="tab-detail-content">
+                                    <p class="tab-detail-desc">
+                                        Structured financial planning, corporate projections, and project banking liaison setups to fuel enterprise expansion.
+                                    </p>
+                                    <ul class="tab-detail-bullets">
+                                        <li><i class="fa-regular fa-circle-check"></i> Project Finance Reports</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Working Capital Setup</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Capital Restructuring</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Service Tab 04 -->
+                            <div class="service-tab-item" data-index="3" data-image="images/service_4.jpg" data-name="S. K. Joshi" data-title="Corporate Law Expert">
+                                <div class="tab-header-row">
+                                    <div class="tab-title-wrap">
+                                        <span class="tab-number">04</span>
+                                        <span class="tab-title">Due Diligence & Company Formation</span>
+                                    </div>
+                                    <span class="tab-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                                <div class="tab-detail-content">
+                                    <p class="tab-detail-desc">
+                                        Full legal audit, structural assessment and seamless incorporation routines for Private Limiteds, LLPs and partnerships.
+                                    </p>
+                                    <ul class="tab-detail-bullets">
+                                        <li><i class="fa-regular fa-circle-check"></i> LLP & Pvt Ltd Setup</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Financial Due Diligence</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Business Setups</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Service Tab 05 -->
+                            <div class="service-tab-item" data-index="4" data-image="images/service_5.jpg" data-name="M. D. Kulkarni" data-title="Compliance Lead">
+                                <div class="tab-header-row">
+                                    <div class="tab-title-wrap">
+                                        <span class="tab-number">05</span>
+                                        <span class="tab-title">Business & Company Law</span>
+                                    </div>
+                                    <span class="tab-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                                <div class="tab-detail-content">
+                                    <p class="tab-detail-desc">
+                                        Handling complex secretarial compliances under the MCA guidelines, corporate filings, legal contracts, and statutory resolutions.
+                                    </p>
+                                    <ul class="tab-detail-bullets">
+                                        <li><i class="fa-regular fa-circle-check"></i> ROC E-Filings</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Company Secretarial</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> MCA Representation</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Service Tab 06 -->
+                            <div class="service-tab-item" data-index="5" data-image="images/service_6.jpg" data-name="P. R. Shinde" data-title="Investment Counsel">
+                                <div class="tab-header-row">
+                                    <div class="tab-title-wrap">
+                                        <span class="tab-number">06</span>
+                                        <span class="tab-title">Investment Schemes</span>
+                                    </div>
+                                    <span class="tab-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </div>
+                                <div class="tab-detail-content">
+                                    <p class="tab-detail-desc">
+                                        Expert advisory on corporate investments, tax-saving schemes, legal structures under allied acts and wealth governance plans.
+                                    </p>
+                                    <ul class="tab-detail-bullets">
+                                        <li><i class="fa-regular fa-circle-check"></i> Tax-Saving Schemes</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Allied Laws Advisory</li>
+                                        <li><i class="fa-regular fa-circle-check"></i> Asset Planning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section (Dark Navy Inset Card) -->
+            <section id="how-it-works" class="how-works reveal">
+                <div class="section-container">
+                    <div class="how-works-banner">
+                        <div class="text-center">
+                            <span class="section-tag tag-white">
+                                <span class="section-tag-cross"><i class="fa-solid fa-xmark"></i></span> How It Works
+                            </span>
+                            <h2 class="section-title text-white title-center">Simple steps to solve complex financial matters.</h2>
+                        </div>
+
+                        <!-- 4 Step Card Grid -->
+                        <div class="steps-grid">
+                            <!-- Step 1 -->
+                            <div class="step-card-new" data-delay="0.05s">
+                                <div class="step-icon-row-new">
+                                    <span class="step-card-icon"><i class="fa-regular fa-comments"></i></span>
+                                    <span class="step-card-badge">01</span>
+                                </div>
+                                <h3 class="step-card-title">Initial Consultation</h3>
+                                <p class="step-card-desc">Free consultation to discuss your needs and map out business requirements.</p>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="step-card-new" data-delay="0.1s">
+                                <div class="step-icon-row-new">
+                                    <span class="step-card-icon"><i class="fa-regular fa-folder-open"></i></span>
+                                    <span class="step-card-badge">02</span>
+                                </div>
+                                <h3 class="step-card-title">Send Documents</h3>
+                                <p class="step-card-desc">Securely share your tax records, ledger files, and company documents for deep review.</p>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="step-card-new" data-delay="0.15s">
+                                <div class="step-icon-row-new">
+                                    <span class="step-card-icon"><i class="fa-solid fa-gears"></i></span>
+                                    <span class="step-card-badge">03</span>
+                                </div>
+                                <h3 class="step-card-title">We Handle the Process</h3>
+                                <p class="step-card-desc">End-to-end handling of your corporate audits, legal MCA filings, and tax compliances.</p>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="step-card-new" data-delay="0.2s">
+                                <div class="step-icon-row-new">
+                                    <span class="step-card-icon"><i class="fa-regular fa-circle-check"></i></span>
+                                    <span class="step-card-badge">04</span>
+                                </div>
+                                <h3 class="step-card-title">Get Ongoing Support</h3>
+                                <p class="step-card-desc">Receive real-time support and strategic advice to ensure sustained business growth.</p>
+                            </div>
+                        </div>
+
+                        <!-- Progress Line at Bottom -->
+                        <div class="timeline-bar-wrap">
+                            <div class="timeline-bar-fill" id="progress-bar"></div>
+                            <div class="timeline-points-row">
+                                <span class="timeline-point-circle active"><span class="timeline-point-label">Step 1</span></span>
+                                <span class="timeline-point-circle" id="pt-circle-2"><span class="timeline-point-label">Step 2</span></span>
+                                <span class="timeline-point-circle" id="pt-circle-3"><span class="timeline-point-label">Step 3</span></span>
+                                <span class="timeline-point-circle" id="pt-circle-4"><span class="timeline-point-label">Step 4</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section id="testimonials" class="testimonials reveal">
+                <div class="section-container">
+                    <div class="text-center">
+                        <span class="section-tag">
+                            <span class="section-tag-cross"><i class="fa-solid fa-xmark"></i></span> Testimonials
+                        </span>
+                        <h2 class="section-title title-center">Real stories from businesses and individuals we've helped.</h2>
+                    </div>
+
+                    <div class="testimonial-single-wrapper" data-delay="0.1s">
+                        <div class="testimonial-card-new">
+                            <p class="testimonial-quote-text">
+                                "Their tax planning service gave us complete clarity and saved us a lot. The advice wasn't just basic legal compliance—it was strategic, growth-oriented, and highly customized to our SME challenges."
+                            </p>
+                            <div class="testimonial-footer-row">
+                                <div class="testimonial-author-box">
+                                    <div class="testimonial-author-avatar">
+                                        <img src="images/testimonial_avatar.jpg" alt="Satisfied Client SME owner representing Nanded area">
+                                    </div>
+                                    <div class="testimonial-author-meta">
+                                        <cite class="testimonial-author-name">Client Review</cite>
+                                        <span class="testimonial-author-role">SME Corporate Owner, Nanded Region</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-nav-arrow" aria-label="Next testimonial">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section (Minimalist Accordion Format) -->
+            <section id="faq" class="faq reveal">
+                <div class="section-container">
+                    <div class="faq-grid">
+                        <!-- Left Intro column -->
+                        <div class="faq-left">
+                            <span class="section-tag">
+                                <span class="section-tag-cross"><i class="fa-solid fa-xmark"></i></span> FAQ
+                            </span>
+                            <h2 class="section-title">Still have questions? We've got answers.</h2>
+                            <p class="faq-intro-para">
+                                Find clear, quick answers to common questions about our corporate auditing, local GST taxes, legal secretarial consulting, and project investment structures.
+                            </p>
+                            <a href="#contact" class="btn btn-navy">Ask a Different Query</a>
+                        </div>
+
+                        <!-- Right Minimalist Accordion group -->
+                        <div class="faq-accordion-minimal" data-delay="0.15s">
+                            <!-- Item 1 (Open by default) -->
+                            <div class="faq-item-minimal open">
+                                <button class="faq-btn-minimal" aria-expanded="true">
+                                    <span>Who needs tax consulting services?</span>
+                                    <i class="fa-solid fa-arrow-right faq-arrow-icon"></i>
+                                </button>
+                                <div class="faq-answer-minimal">
+                                    <p>Individuals with complex finances, freelancers, SMEs, and corporations benefit from tailored tax strategies and compliance support.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="faq-item-minimal">
+                                <button class="faq-btn-minimal" aria-expanded="false">
+                                    <span>Is my financial information kept confidential?</span>
+                                    <i class="fa-solid fa-arrow-right faq-arrow-icon"></i>
+                                </button>
+                                <div class="faq-answer-minimal">
+                                    <p>Yes. All client information is strictly confidential and handled under professional ethics and legal obligations.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="faq-item-minimal">
+                                <button class="faq-btn-minimal" aria-expanded="false">
+                                    <span>Can you help with tax audits or disputes?</span>
+                                    <i class="fa-solid fa-arrow-right faq-arrow-icon"></i>
+                                </button>
+                                <div class="faq-answer-minimal">
+                                    <p>Absolutely. We represent clients in tax audits, assessments, and dispute resolution before relevant authorities.</p>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="faq-item-minimal">
+                                <button class="faq-btn-minimal" aria-expanded="false">
+                                    <span>What documents do I need to prepare?</span>
+                                    <i class="fa-solid fa-arrow-right faq-arrow-icon"></i>
+                                </button>
+                                <div class="faq-answer-minimal">
+                                    <p>Typically PAN, Aadhaar, bank statements, previous ITR, business registration documents (if applicable). We guide you step by step.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section (Dark Navy Inset Card Grid) -->
+            <section id="contact" class="contact reveal">
+                <div class="section-container">
+                    <div class="contact-dark-card">
+                        <div class="contact-grid-new">
+                            <!-- Left Column: Form Container Card -->
+                            <div class="contact-white-card" data-delay="0.1s">
+                                <h3>Let's Talk Tax</h3>
+                                <form id="contactForm">
+                                    <div class="form-group-new">
+                                        <label for="form-name" class="form-label-new">Full Name</label>
+                                        <input type="text" id="form-name" class="form-input-new" placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="form-group-new">
+                                        <label for="form-email" class="form-label-new">Email Address</label>
+                                        <input type="email" id="form-email" class="form-input-new" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="form-group-new">
+                                        <label for="form-message" class="form-label-new">Message / Tax Concern</label>
+                                        <textarea id="form-message" class="form-input-new" rows="4" placeholder="Detail your requirements..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-navy-submit btn-block">Send My Message</button>
+                                </form>
+                            </div>
+
+                            <!-- Right Column: Visual sidebar & details list -->
+                            <div class="contact-right-sidebar" data-delay="0.15s">
+                                <div class="contact-sidebar-image-box">
+                                    <img src="images/team_collaboration.jpg" alt="Tax expert consulting on professional documentation">
+                                </div>
+
+                                <div class="contact-sub-details-list">
+                                    <!-- Detail Row 1 -->
+                                    <div class="contact-sub-detail-item">
+                                        <div class="contact-sub-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                                        <div class="contact-sub-detail-text">
+                                            <strong>Send Us a Query</strong>
+                                            <a href="mailto:query@jinkeassociates.com">query@jinkeassociates.com</a>
+                                        </div>
+                                    </div>
+                                    <!-- Detail Row 2 -->
+                                    <div class="contact-sub-detail-item">
+                                        <div class="contact-sub-icon-circle"><i class="fa-solid fa-phone"></i></div>
+                                        <div class="contact-sub-detail-text">
+                                            <strong>Call Our Consultants</strong>
+                                            <span>+91 20 4911 3400</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Large Typographic CTA Section above footer -->
+            <section class="typo-cta-section reveal">
+                <span class="typo-cta-arrow">↗</span>
+                <h2 class="typo-cta-headline">Let our experts handle the numbers — so you can focus on growth.</h2>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="section-container" style="padding:0 24px;">
+                    <div class="footer-grid-row">
+                        <!-- Brand column -->
+                        <div class="footer-brand">
+                            <h3>Jinke & Associates</h3>
+                            <p>Taxes, Handled with Precision and Peace of Mind. Serving smart, compliant, and stress-free solutions for modern business compliance.</p>
+                        </div>
+
+                        <!-- Site Links -->
+                        <div class="footer-column">
+                            <h4>Quick Links</h4>
+                            <ul class="footer-links-list">
+                                <li><a href="#hero">Home</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#services">Services</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Legal Info -->
+                        <div class="footer-column">
+                            <h4>Legal</h4>
+                            <ul class="footer-links-list">
+                                <li><a href="#" class="modal-trigger" id="disclaimer-trigger">Disclaimer</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Location & Contact -->
+                        <div class="footer-contact">
+                            <h4>Office Contact</h4>
+                            <div class="footer-contact-info-list">
+                                <div class="footer-contact-item">
+                                    <span>Pune Head Office</span>
+                                    <a href="#">Jinke Tower, FC Road, Pune, Maharashtra 411004</a>
+                                </div>
+                                <div class="footer-contact-item">
+                                    <span>Support Email</span>
                                     <a href="mailto:query@jinkeassociates.com">query@jinkeassociates.com</a>
                                 </div>
                             </div>
-                            <div class="contact-card-item">
-                                <span class="icon-circle"><i class="fa-solid fa-phone"></i></span>
-                                <div class="card-details-text">
-                                    <strong>Call Our Consultants</strong>
-                                    <span>+91 20 4911 3400</span>
-                                </div>
+
+                            <div class="footer-social-row">
+                                <a href="https://www.facebook.com/vijaykalaniandco" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/vrknco_ca/" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/groups/9185560" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: Form -->
-                    <div class="contact-form-wrapper">
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="form-name">Full Name</label>
-                                <input type="text" id="form-name" placeholder="Enter your full name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="form-email">Email Address</label>
-                                <input type="email" id="form-email" placeholder="Enter your business email" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="form-message">Message / Tax Concern</label>
-                                <textarea id="form-message" rows="5" placeholder="Detail your financial or auditing requirement..." required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-navy-submit">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-container">
-                <div class="footer-grid">
-                    <!-- Brand info -->
-                    <div class="footer-brand">
-                        <h3>Jinke & Associates</h3>
-                        <p class="tagline">"Taxes, Handled with Precision and Peace of Mind"</p>
-                    </div>
-
-                    <!-- Navigation shortcuts -->
-                    <div class="footer-nav">
-                        <h4>Quick Links</h4>
-                        <ul class="footer-links-list">
-                            <li><a href="#hero">Home</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Query</a></li>
-                            <li><a href="#" class="modal-trigger" id="disclaimer-trigger">Disclaimer</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Social handles -->
-                    <div class="footer-social">
-                        <h4>Follow Us</h4>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/vijaykalaniandco" target="_blank" rel="noopener noreferrer" aria-label="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/vrknco_ca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/groups/9185560" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Group"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile"><i class="fa-brands fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footer-bottom">
-            <div class="footer-container bottom-flex">
-                <p class="copyright">&copy; 2023 Jinke & Associates. All Rights Reserved to www.vijayrkalani.com</p>
-                <p class="disclaimer-note">Disclaimer: Professional services are subject to regulatory compliances under ICAI rules.</p>
+            <!-- Bottom Row -->
+            <div class="footer-bottom">
+                <div class="section-container bottom-flex-container" style="padding:0 24px;">
+                    <p class="copyright-text">&copy; 2026 Jinke & Associates. All Rights Reserved to <a href="http://www.vijayrkalani.com" target="_blank" rel="noopener">www.vijayrkalani.com</a></p>
+                    <p class="disclaimer-footer-note">Disclaimer: Professional CA services are subject to regulatory compliances under ICAI regulations.</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
-    <!-- Disclaimer Modal Popup -->
+    <!-- Disclaimer Modal Overlay Popup -->
     <div class="modal-overlay" id="disclaimer-modal">
         <div class="modal-content">
             <button class="modal-close" aria-label="Close modal">&times;</button>

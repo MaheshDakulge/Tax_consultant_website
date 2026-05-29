@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
     const revealObserverOptions = {
         root: null,
-        threshold: 0.15,
+        threshold: 0.1,
         rootMargin: '0px'
     };
 
@@ -21,10 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-                // Fill how-it-works progress line if this section is hit
+                // Trigger Sequenced Timeline Progress Fill
                 const progressFill = entry.target.querySelector('#progress-bar');
-                if (progressFill) {
-                    progressFill.style.width = '100%';
+                if (progressFill && !progressFill.classList.contains('animated')) {
+                    progressFill.classList.add('animated');
+                    animateTimelineProgressBar(progressFill);
                 }
 
                 // Stop observing this element once it has revealed itself
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const target = parseInt(el.getAttribute('data-target'), 10);
         const suffix = el.getAttribute('data-suffix') || '';
         let start = 0;
-        const duration = 1600; // ms
+        const duration = 1600; // total duration of the animation in ms
         const stepTime = Math.max(Math.floor(duration / target), 15);
         
         const timer = setInterval(() => {
@@ -61,7 +62,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 3. Navbar Scroll Class Toggle
+    // 3. Sequenced Timeline Progress Fill
+    // -------------------------------------------------------------
+    function animateTimelineProgressBar(bar) {
+        // Animate width of the bar to 100%
+        bar.style.width = '100%';
+
+        // Sequenced activations for each timeline point circle
+        const circle2 = document.getElementById('pt-circle-2');
+        const circle3 = document.getElementById('pt-circle-3');
+        const circle4 = document.getElementById('pt-circle-4');
+
+        setTimeout(() => {
+            if (circle2) circle2.classList.add('active');
+        }, 450); // Activate Step 2 circle at ~33% visual width
+
+        setTimeout(() => {
+            if (circle3) circle3.classList.add('active');
+        }, 900); // Activate Step 3 circle at ~66% visual width
+
+        setTimeout(() => {
+            if (circle4) circle4.classList.add('active');
+        }, 1350); // Activate Step 4 circle at 100% visual width
+    }
+
+    // -------------------------------------------------------------
+    // 4. Interactive Service Showcase Tab Switcher
+    // -------------------------------------------------------------
+    const serviceTabItems = document.querySelectorAll('.service-tab-item');
+    const previewImg = document.getElementById('service-preview-img');
+    const previewName = document.getElementById('preview-advisor-name');
+    const previewTitle = document.getElementById('preview-advisor-title');
+
+    if (serviceTabItems.length > 0 && previewImg) {
+        serviceTabItems.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Ignore if clicked tab is already active
+                if (tab.classList.contains('active')) return;
+
+                // 1. Remove active state from current tab items
+                serviceTabItems.forEach(item => item.classList.remove('active'));
+
+                // 2. Set active state on clicked tab item
+                tab.classList.add('active');
+
+                // 3. Extract metadata from data attributes
+                const newImgSrc = tab.getAttribute('data-image');
+                const newName = tab.getAttribute('data-name');
+                const newTitle = tab.getAttribute('data-title');
+
+                // 4. Smoothly cross-fade the left panel visual card content
+                previewImg.style.opacity = '0';
+                previewImg.style.transform = 'scale(0.97)';
+                
+                setTimeout(() => {
+                    // Update image and text content
+                    previewImg.setAttribute('src', newImgSrc);
+                    if (previewName) previewName.textContent = newName;
+                    if (previewTitle) previewTitle.textContent = newTitle;
+
+                    // Fade back in with dynamic transform
+                    previewImg.style.opacity = '1';
+                    previewImg.style.transform = 'scale(1)';
+                }, 280); // Corresponds nicely with transition speeds
+            });
+        });
+    }
+
+    // -------------------------------------------------------------
+    // 5. Navbar Scroll Handling
     // -------------------------------------------------------------
     const navbar = document.querySelector('.navbar');
     
@@ -74,35 +143,37 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', handleNavbarScroll);
-    handleNavbarScroll(); // Trigger immediately to capture initial page load scroll position
+    handleNavbarScroll(); // Initial execution on DOM loading
 
     // -------------------------------------------------------------
-    // 4. Mobile Menu Navigation Hamburger Toggle
+    // 6. Mobile Drawer & Hamburg Controls
     // -------------------------------------------------------------
     const hamburger = document.querySelector('.hamburger');
     const navDrawer = document.querySelector('.nav-drawer');
     const drawerItems = document.querySelectorAll('.drawer-item');
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navDrawer.classList.toggle('open');
-    });
+    if (hamburger && navDrawer) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navDrawer.classList.toggle('open');
+        });
 
-    // Close drawer when clicking any link that is NOT the mobile-dropdown
-    drawerItems.forEach(item => {
-        if (!item.classList.contains('mobile-dropdown-btn')) {
-            item.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navDrawer.classList.remove('open');
-            });
-        }
-    });
+        // Close drawer upon clicking menu links (excluding collapsible category triggers)
+        drawerItems.forEach(item => {
+            if (!item.classList.contains('mobile-dropdown-btn')) {
+                item.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navDrawer.classList.remove('open');
+                });
+            }
+        });
+    }
 
-    // Collapsible Mobile Dropdown in Drawer
+    // Mobile Knowledge Bank dropdown toggle
     const mobileDropdownBtn = document.querySelector('.mobile-dropdown-btn');
     const mobileMegaMenu = document.querySelector('.mobile-mega-menu');
 
-    if (mobileDropdownBtn) {
+    if (mobileDropdownBtn && mobileMegaMenu) {
         mobileDropdownBtn.addEventListener('click', (e) => {
             e.preventDefault();
             mobileMegaMenu.classList.toggle('active');
@@ -115,38 +186,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -------------------------------------------------------------
-    // 5. FAQ Accordion Logic (Single Item Expanded at a time)
+    // 7. Minimalist Editorial Accordion FAQ Controls
     // -------------------------------------------------------------
-    const faqItems = document.querySelectorAll('.faq-item');
+    const faqItems = document.querySelectorAll('.faq-item-minimal');
 
     faqItems.forEach(item => {
-        const questionBtn = item.querySelector('.faq-question');
+        const btn = item.querySelector('.faq-btn-minimal');
         
-        questionBtn.addEventListener('click', () => {
+        btn.addEventListener('click', () => {
             const isOpen = item.classList.contains('open');
             
-            // Close all items
+            // Close all open items
             faqItems.forEach(i => {
                 i.classList.remove('open');
-                const icon = i.querySelector('.faq-icon i');
-                if (icon) {
-                    icon.className = 'fa-solid fa-plus';
-                }
+                const iBtn = i.querySelector('.faq-btn-minimal');
+                if (iBtn) iBtn.setAttribute('aria-expanded', 'false');
             });
 
-            // If the item clicked wasn't already open, open it
+            // Toggle click event
             if (!isOpen) {
                 item.classList.add('open');
-                const currentIcon = item.querySelector('.faq-icon i');
-                if (currentIcon) {
-                    currentIcon.className = 'fa-solid fa-plus'; // Rotated via CSS transition transform
-                }
+                btn.setAttribute('aria-expanded', 'true');
             }
         });
     });
 
     // -------------------------------------------------------------
-    // 6. Contact Form Mock AJAX Submission
+    // 8. Contact Form Submissions (Mocking API AJAX Feedback)
     // -------------------------------------------------------------
     const contactForm = document.getElementById('contactForm');
 
@@ -158,48 +224,54 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = submitBtn.textContent;
             
             // Enter loading state
-            submitBtn.textContent = 'Sending...';
+            submitBtn.textContent = 'Sending Message...';
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.75';
 
             setTimeout(() => {
-                // Success feedback state
-                submitBtn.textContent = '✓ Message Sent';
-                submitBtn.style.background = '#1a7a4a'; // Success green background
+                // Success state transition
+                submitBtn.textContent = '✓ Message Sent Successfully';
+                submitBtn.style.background = '#2ECC71'; // Accent green success color
+                submitBtn.style.borderColor = '#2ECC71';
                 submitBtn.style.opacity = '1';
                 
                 // Clear fields
                 contactForm.reset();
 
-                // Revert button back after a few seconds
+                // Revert button back after a small period
                 setTimeout(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.style.background = '';
+                    submitBtn.style.borderColor = '';
                     submitBtn.disabled = false;
                     submitBtn.style.opacity = '';
                 }, 3000);
 
-            }, 1500);
+            }, 1400);
         });
     }
 
     // -------------------------------------------------------------
-    // 7. Disclaimer Modal Overlay Controls
+    // 9. Regulatory Disclaimer Modal Control Overlay
     // -------------------------------------------------------------
     const disclaimerTrigger = document.getElementById('disclaimer-trigger');
     const disclaimerModal = document.getElementById('disclaimer-modal');
-    const modalCloseBtn = disclaimerModal.querySelector('.modal-close');
-    const modalCloseOkBtn = disclaimerModal.querySelector('.btn-close-modal');
+    const modalCloseBtn = disclaimerModal ? disclaimerModal.querySelector('.modal-close') : null;
+    const modalCloseOkBtn = disclaimerModal ? disclaimerModal.querySelector('.btn-close-modal') : null;
 
     const showModal = (e) => {
         if (e) e.preventDefault();
-        disclaimerModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Stop background scrolling
+        if (disclaimerModal) {
+            disclaimerModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     };
 
     const hideModal = () => {
-        disclaimerModal.classList.remove('active');
-        document.body.style.overflow = ''; // Resume background scrolling
+        if (disclaimerModal) {
+            disclaimerModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     };
 
     if (disclaimerTrigger) {
@@ -214,10 +286,11 @@ document.addEventListener('DOMContentLoaded', () => {
         modalCloseOkBtn.addEventListener('click', hideModal);
     }
 
-    // Close modal if user clicks on overlay background
-    disclaimerModal.addEventListener('click', (e) => {
-        if (e.target === disclaimerModal) {
-            hideModal();
-        }
-    });
+    if (disclaimerModal) {
+        disclaimerModal.addEventListener('click', (e) => {
+            if (e.target === disclaimerModal) {
+                hideModal();
+            }
+        });
+    }
 });
