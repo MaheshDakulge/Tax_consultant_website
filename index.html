@@ -231,6 +231,12 @@
             <!-- Hero Wrapper (Inset Rounded Card) -->
             <div class="hero-wrapper" id="hero">
                 <section class="hero-inset-card" style="background-image: linear-gradient(rgba(15, 28, 46, 0.45), rgba(15, 28, 46, 0.65)), url('images/hero_bg.jpg');">
+                    <div class="hero-bg-shapes">
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="hero-glass-panel"></div>
+                    <span class="hero-bg-watermark">CA</span>
                     <!-- Hero Top Badge Line -->
                     <div class="hero-badge-row">
                         <span class="hero-badge">Since 2020</span>
@@ -344,9 +350,9 @@
                                 <img src="images/team_collaboration.jpg" alt="Jinke & Associates tax advisors collaborating on business audit reviews">
                             </div>
 
-                            <div class="why-sub-grid">
+                            <div class="why-sub-grid stagger-parent">
                                 <!-- Sub Card 1 -->
-                                <div class="why-sub-card" data-delay="0.2s">
+                                <div class="why-sub-card stagger-item" data-delay="0.2s">
                                     <div>
                                         <h4><i class="fa-solid fa-circle-check"></i> Proven Track Record</h4>
                                         <p>Trusted by hundreds of clients—individuals, SMEs, and corporations—with measurable results.</p>
@@ -358,7 +364,7 @@
                                 </div>
 
                                 <!-- Sub Card 2 -->
-                                <div class="why-sub-card" data-delay="0.25s">
+                                <div class="why-sub-card stagger-item" data-delay="0.25s">
                                     <div>
                                         <h4><i class="fa-solid fa-compass-drafting"></i> Tailored Tax Strategies</h4>
                                         <p>We customize solutions to fit your personal or business goals—no one-size-fits-all approach.</p>
@@ -544,9 +550,9 @@
                         </div>
 
                         <!-- 4 Step Card Grid -->
-                        <div class="steps-grid">
+                        <div class="steps-grid stagger-parent">
                             <!-- Step 1 -->
-                            <div class="step-card-new" data-delay="0.05s">
+                            <div class="step-card-new stagger-item" data-delay="0.05s">
                                 <div class="step-icon-row-new">
                                     <span class="step-card-icon"><i class="fa-regular fa-comments"></i></span>
                                     <span class="step-card-badge">01</span>
@@ -556,7 +562,7 @@
                             </div>
 
                             <!-- Step 2 -->
-                            <div class="step-card-new" data-delay="0.1s">
+                            <div class="step-card-new stagger-item" data-delay="0.1s">
                                 <div class="step-icon-row-new">
                                     <span class="step-card-icon"><i class="fa-regular fa-folder-open"></i></span>
                                     <span class="step-card-badge">02</span>
@@ -566,7 +572,7 @@
                             </div>
 
                             <!-- Step 3 -->
-                            <div class="step-card-new" data-delay="0.15s">
+                            <div class="step-card-new stagger-item" data-delay="0.15s">
                                 <div class="step-icon-row-new">
                                     <span class="step-card-icon"><i class="fa-solid fa-gears"></i></span>
                                     <span class="step-card-badge">03</span>
@@ -576,7 +582,7 @@
                             </div>
 
                             <!-- Step 4 -->
-                            <div class="step-card-new" data-delay="0.2s">
+                            <div class="step-card-new stagger-item" data-delay="0.2s">
                                 <div class="step-icon-row-new">
                                     <span class="step-card-icon"><i class="fa-regular fa-circle-check"></i></span>
                                     <span class="step-card-badge">04</span>
@@ -827,48 +833,28 @@
         </div>
         <div class="footer-bottom">
             <div class="section-container bottom-flex-container" style="padding:0 24px;">
-                <p class="copyright-text">&copy; 2025. All Rights Reserved — Jinke & Associates, Nanded.</p>
+                <p class="copyright-text">&copy; 2026. All Rights Reserved — Jinke & Associates, Nanded.</p>
                 <p class="disclaimer-footer-note" style="font-size:12px; color:rgba(255,255,255,0.5);">Co-brand: In association with Pravin Chavan & Associates, CA India</p>
             </div>
         </div>
+        <!-- Floating Action Buttons (Inside page-wrapper) -->
+        <div class="fab-container">
+            <!-- WhatsApp Tooltip Bubble -->
+            <div id="wa-tooltip">
+                <button id="wa-tooltip-close" aria-label="Close">&times;</button>
+                <p>Hi! Need help with taxes? 👋 Chat with us on WhatsApp.</p>
+            </div>
+            <a href="https://wa.me/912462298101?text=Hello%20Jinke%20%26%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20your%20tax%20services." target="_blank" rel="noopener noreferrer" class="fab-btn fab-whatsapp" aria-label="WhatsApp Us">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="tel:+912462298101" class="fab-btn fab-call" aria-label="Call Us">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+            <button class="fab-btn fab-scroll-top" aria-label="Scroll to Top">
+                <i class="fa-solid fa-chevron-up"></i>
+            </button>
+        </div>
     </footer>
-    </div>
-
-        <!-- Floating Action Buttons -->
-    <div class="fab-container">
-        <!-- WhatsApp Tooltip Bubble -->
-        <div id="wa-tooltip">
-            <button id="wa-tooltip-close" aria-label="Close">&times;</button>
-            <p>Hi! Need help with taxes? 👋 Chat with us on WhatsApp.</p>
-        </div>
-        <a href="https://wa.me/912462298101?text=Hello%20Jinke%20%26%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20your%20tax%20services." target="_blank" rel="noopener noreferrer" class="fab-btn fab-whatsapp" aria-label="WhatsApp Us">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="tel:+912462298101" class="fab-btn fab-call" aria-label="Call Us">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <button class="fab-btn fab-scroll-top" aria-label="Scroll to Top">
-            <i class="fa-solid fa-chevron-up"></i>
-        </button>
-    </div>
-
-    <!-- Disclaimer Modal Overlay Popup -->
-            <!-- Floating Action Buttons -->
-    <div class="fab-container">
-        <!-- WhatsApp Tooltip Bubble -->
-        <div id="wa-tooltip">
-            <button id="wa-tooltip-close" aria-label="Close">&times;</button>
-            <p>Hi! Need help with taxes? 👋 Chat with us on WhatsApp.</p>
-        </div>
-        <a href="https://wa.me/912462298101?text=Hello%20Jinke%20%26%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20your%20tax%20services." target="_blank" rel="noopener noreferrer" class="fab-btn fab-whatsapp" aria-label="WhatsApp Us">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="tel:+912462298101" class="fab-btn fab-call" aria-label="Call Us">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <button class="fab-btn fab-scroll-top" aria-label="Scroll to Top">
-            <i class="fa-solid fa-chevron-up"></i>
-        </button>
     </div>
 
     <!-- Disclaimer Modal Overlay Popup -->
@@ -884,7 +870,6 @@
             </p>
             <button class="btn btn-navy btn-close-modal">I Understand</button>
         </div>
-    </div>
     </div>
 
     <!-- Main JavaScript File -->

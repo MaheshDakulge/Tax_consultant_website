@@ -2068,6 +2068,7 @@ a {
         gap: 12px;
         text-align: center;
     }
+}
 
 /* ==========================================================================
    INNER PAGE — SHARED COMPONENTS
@@ -2477,18 +2478,48 @@ a {
 /* ==========================================================================
    BLOG LISTING PAGE
    ========================================================================== */
-.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 20px; }
-.blog-card { background: var(--color-white); border: 1px solid var(--color-border-light); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-subtle); transition: var(--transition-smooth); text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+
+/* Blog card image placeholder */
+.blog-card-img-placeholder {
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, #F4F3F0, #E8E6E0);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 36px; color: var(--color-muted);
+}
+.blog-featured-post {
+    background: var(--color-white); border: 1px solid var(--color-border-light);
+    border-radius: 24px; padding: 40px; margin-bottom: 48px;
+    position: relative; box-shadow: var(--shadow-subtle);
+}
+.blog-featured-badge {
+    position: absolute; top: 24px; right: 24px;
+    background: var(--color-dark); color: var(--color-white);
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1px; padding: 6px 14px; border-radius: 99px;
+}
+.blog-featured-content { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+.blog-featured-text h2 { font-size: 28px; margin-bottom: 12px; }
+.blog-featured-text p { font-size: 15px; color: var(--color-muted); margin-bottom: 20px; }
+.blog-thumbnail-placeholder { width: 180px; height: 180px; background: #F4F3F0; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 48px; color: var(--color-muted); }
+.blog-filter-bar { margin-bottom: 40px; }
+.blog-filter-tabs { display: flex; gap: 10px; flex-wrap: wrap; }
+.blog-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+.blog-category-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--color-dark); background: #F4F3F0; padding: 4px 10px; border-radius: 99px; }
+.blog-date, .blog-author { font-size: 12px; color: var(--color-muted); }
+.blog-read-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--color-dark); }
+.blog-card { display: flex; flex-direction: column; background: var(--color-white); border: 1px solid var(--color-border-light); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-subtle); transition: var(--transition-smooth); }
 .blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.blog-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; line-height: 1.4; }
+.blog-card p { font-size: 13.5px; color: var(--color-muted); margin-bottom: 16px; flex: 1; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+
+/* Keep other specific styles that are used by the HTML template */
 .blog-card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
 .blog-card:hover .blog-card-img { transform: scale(1.04); }
 .blog-card-img-wrap { overflow: hidden; }
-.blog-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .blog-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .blog-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--color-dark); background: #F4F3F0; padding: 4px 10px; border-radius: 99px; }
-.blog-date { font-size: 11px; color: var(--color-muted); font-weight: 500; }
-.blog-card h3 { font-size: 18px; font-weight: 600; line-height: 1.4; margin-bottom: 10px; }
-.blog-card p { font-size: 13.5px; color: var(--color-muted); line-height: 1.55; flex: 1; margin-bottom: 18px; }
 .blog-read-more { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--color-dark); }
 .blog-read-more i { font-size: 10px; transition: transform 0.3s; }
 .blog-card:hover .blog-read-more i { transform: translateX(4px); }
@@ -3045,13 +3076,13 @@ a {
 /* ==========================================================================
    PAGE LOAD ANIMATION & TOP PROGRESS BAR LOADER
    ========================================================================== */
-body {
-    animation: pageEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
-}
+/* At top of body styles */
+body { animation: pageEnter 0.5s cubic-bezier(0.16,1,0.3,1) both; }
+@keyframes pageEnter { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:none; } }
 
-@keyframes pageEnter {
-    from { opacity: 0; transform: translateY(6px); }
-    to   { opacity: 1; transform: translateY(0); }
+/* Link exit transition */
+a[href$=".html"]:not([target]) {
+    transition: opacity 0.2s ease;
 }
 
 #page-loader {
@@ -3439,4 +3470,16 @@ img[loading="lazy"] {
 .hero-inset-card {
     will-change: background-position;
 }
+
+/* 3D Card Tilt Effect */
+.step-card-new, .why-sub-card, .value-card, .service-overview-card, .kb-cat-card {
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), box-shadow 0.5s ease;
+}
+.step-card-new:hover { transform: perspective(1000px) rotateX(-3deg) rotateY(3deg) translateY(-8px); }
+.why-sub-card:hover { transform: perspective(1000px) rotateX(-2deg) rotateY(2deg) translateY(-6px); }
+.value-card:hover { transform: perspective(1000px) rotateX(-2deg) rotateY(-2deg) translateY(-5px); }
+.service-overview-card:hover { transform: perspective(1000px) rotateX(-3deg) rotateY(2deg) translateY(-8px); }
+.kb-cat-card:hover { transform: perspective(1000px) rotateX(-4deg) rotateY(4deg) translateY(-8px); }
 

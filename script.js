@@ -476,18 +476,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Magnetic effect on .btn-navy elements
-    document.querySelectorAll('.btn-navy').forEach(btn => {
+    // Magnetic effect on buttons (handles edge cases near viewport edges)
+    document.querySelectorAll('.btn-navy, .btn-white-pill').forEach(btn => {
         btn.addEventListener('mousemove', function(e) {
             const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            const maxPull = 6;
-            this.style.transform = `translateY(-2px) translate(${Math.min(maxPull, x * 0.25)}px, ${Math.min(maxPull, y * 0.25)}px)`;
+            const x = Math.max(-8, Math.min(8, (e.clientX - rect.left - rect.width/2) * 0.3));
+            const y = Math.max(-4, Math.min(4, (e.clientY - rect.top - rect.height/2) * 0.2));
+            this.style.transform = `translateY(-2px) translate(${x}px, ${y}px)`;
         });
-        btn.addEventListener('mouseleave', function() {
-            this.style.transform = '';
-        });
+        btn.addEventListener('mouseleave', function() { this.style.transform = ''; });
     });
 
     // -------------------------------------------------------------
