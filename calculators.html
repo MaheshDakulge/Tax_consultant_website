@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Tax Calculators from Jinke & Associates — GST Calculator, Income Tax Calculator, and TDS Calculator for quick tax estimates."
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jinkeassociates.com/calculators.html">
+    <meta property="og:title" content="Tax Calculators | Knowledge Bank | Jinke & Associates">
+    <meta property="og:description" content="Free Tax Calculators from Jinke & Associates — GST Calculator, Income Tax Calculator, and TDS Calculator for quick tax estimates.">
+    <meta property="og:image" content="https://jinkeassociates.com/images/sofa_office.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jinkeassociates.com/calculators.html">
+    <meta property="twitter:title" content="Tax Calculators | Knowledge Bank | Jinke & Associates">
+    <meta property="twitter:description" content="Free Tax Calculators from Jinke & Associates — GST Calculator, Income Tax Calculator, and TDS Calculator for quick tax estimates.">
+    <meta property="twitter:image" content="https://jinkeassociates.com/images/sofa_office.jpg">>
+    <title>Tax Calculators | Knowledge Bank | Jinke & Associates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="page-loader"></div>
+<div class="page-wrapper">
+    <div class="drawer-overlay"></div>
+        <!-- Site Header -->
+        <header class="site-header">
+        <!-- Sticky Top Bar -->
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <a href="tel:+912462298101"><i class="fa-solid fa-phone"></i> +91 2462 298101 (Nanded)</a>
+                <span style="margin: 0 8px; color: rgba(255,255,255,0.3);">|</span>
+                <a href="tel:+912049113400"><i class="fa-solid fa-phone"></i> +91 20 4911 3400 (Pune)</a>
+            </div>
+            <div class="top-bar-center">
+                <a href="mailto:query@jinkeassociates.com"><i class="fa-solid fa-envelope"></i> query@jinkeassociates.com</a>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="fa-solid fa-clock"></i> Mon–Sat: 9:30 AM – 7:00 PM</span>
+                <div class="top-bar-socials" style="margin-left: 16px;">
+                    <a href="https://www.facebook.com/vijaykalaniandco" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/vrknco_ca/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/groups/9185560" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation Header Bar -->
+        <div class="navbar-wrapper">
+            <div class="navbar">
+                <div class="nav-container" style="display:flex; align-items:center; width:100%; justify-content:space-between;">
+                    <a href="index.html" class="logo-wrap" id="logo-brand" style="display:flex; align-items:center; gap:10px; text-decoration:none;">
+                        <div class="logo-icon"><i class="fa-solid fa-building-columns"></i></div>
+                        <div class="logo-text" style="display:flex; flex-direction:column;">
+                            <span class="logo-main" style="font-family:'Cormorant Garamond', serif; font-weight:700; font-size:22px; color:var(--color-dark); line-height:1.1;">Jinke & Associates</span>
+                            <span class="logo-sub" style="font-size:9px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--color-muted); line-height:1;">Tax Consultant</span>
+                        </div>
+                    </a>
+                    <div class="co-brand-text" style="font-size:10px; color:var(--color-muted); max-width:200px; line-height:1.2; font-weight:600; margin-left:12px; font-family:var(--font-body); transition: var(--transition-smooth);">
+                        In association with Pravin Chavan & Associates, CA India
+                    </div>
+                    <button class="hamburger" aria-label="Toggle navigation drawer" style="margin-left:auto;">
+                        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                    </button>
+                    <nav class="nav-menu">
+                        <ul class="nav-links">
+                            <li><a href="index.html" class="nav-item">Home</a></li>
+                            <li><a href="about.html" class="nav-item">About</a></li>
+                            <li class="dropdown-trigger">
+                                <a href="services.html" class="nav-item">Services <i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="mega-menu" style="max-width:700px;">
+                                    <div class="mega-grid" style="grid-template-columns:repeat(3,1fr);">
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-file-invoice-dollar"></i> Tax Services</h4>
+                                            <ul>
+                                                <li><a href="income-tax.html">Income Tax Filing</a></li>
+                                                <li><a href="gst.html">GST Advisory</a></li>
+                                                <li><a href="tax-planning.html">Tax Planning</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-building"></i> Business</h4>
+                                            <ul>
+                                                <li><a href="business-reg.html">Business Registration</a></li>
+                                                <li><a href="accounting.html">Accounting & Payroll</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-globe"></i> Specialized</h4>
+                                            <ul>
+                                                <li><a href="nri-taxation.html">NRI Taxation</a></li>
+                                                <li><a href="services.html">All Services →</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown-trigger">
+                                <a href="knowledge-bank.html" class="nav-item">Knowledge Bank <i class="fa-solid fa-chevron-down"></i></a>
+                                <div class="mega-menu">
+                                    <div class="mega-grid" style="grid-template-columns: repeat(5, 1fr); gap: 15px; width: 1000px; padding: 24px;">
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-calculator"></i> Calculators</h4>
+                                            <ul style="font-size: 11px;">
+                                                <li><a href="calculators.html#gst-calc">GST Calculator</a></li>
+                                                <li><a href="calculators.html#tax-calc">Tax Calculator</a></li>
+                                                <li><a href="calculators.html#tds-calc">TDS Calculator</a></li>
+                                                <li><a href="calculators.html">GST MRP Calculator</a></li>
+                                                <li><a href="calculators.html">GST Rate Calculator</a></li>
+                                                <li><a href="calculators.html">Net Profit Calculator</a></li>
+                                                <li><a href="calculators.html">Net Worth Calculator</a></li>
+                                                <li><a href="calculators.html">HRA Calculator</a></li>
+                                                <li><a href="calculators.html">NSC Calculator</a></li>
+                                                <li><a href="calculators.html">EMI Calculator</a></li>
+                                                <li><a href="calculators.html">Auto Loan Calculator</a></li>
+                                                <li><a href="calculators.html">Home Loan Calculator</a></li>
+                                                <li><a href="calculators.html">RERA Calculator</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-square-rss"></i> Bulletins</h4>
+                                            <ul style="font-size: 11px;">
+                                                <li><a href="bulletins.html#income-tax">Income Tax Updates</a></li>
+                                                <li><a href="bulletins.html#gst">GST & Service Tax</a></li>
+                                                <li><a href="bulletins.html#company-law">Company Law</a></li>
+                                                <li><a href="bulletins.html">RBI SEBI Bulletins</a></li>
+                                                <li><a href="bulletins.html">Labour Laws Updates</a></li>
+                                                <li><a href="bulletins.html">FEMA Bulletins</a></li>
+                                                <li><a href="bulletins.html">IGST / UTGST</a></li>
+                                                <li><a href="bulletins.html">IBC Regulation</a></li>
+                                                <li><a href="bulletins.html">Accounting Standards INDAS</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-wrench"></i> Utilities</h4>
+                                            <ul style="font-size: 11px;">
+                                                <li><a href="utilities.html#tds-rates">TDS Rates</a></li>
+                                                <li><a href="utilities.html#it-slabs">IT Slab Rates</a></li>
+                                                <li><a href="utilities.html#depreciation">Depreciation Rates</a></li>
+                                                <li><a href="utilities.html#gst-rates">GST Rate Chart</a></li>
+                                                <li><a href="utilities.html">ROC Fees Structure</a></li>
+                                                <li><a href="utilities.html">Cost Inflation Index</a></li>
+                                                <li><a href="utilities.html">IFSC Codes</a></li>
+                                                <li><a href="utilities.html">Gold & Silver Rates</a></li>
+                                                <li><a href="utilities.html">HSN Rate List</a></li>
+                                                <li><a href="utilities.html">Stamp Duty Rates</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-scale-balanced"></i> Acts</h4>
+                                            <ul style="font-size: 11px;">
+                                                <li><a href="acts.html#income-tax-act">Income Tax Act</a></li>
+                                                <li><a href="acts.html#gst-act">CGST Act 2017</a></li>
+                                                <li><a href="acts.html#companies-act">Companies Act 2013</a></li>
+                                                <li><a href="acts.html#fema-act">FEMA 1999</a></li>
+                                                <li><a href="acts.html#llp-act">LLP Act 2008</a></li>
+                                                <li><a href="acts.html">SEBI Act</a></li>
+                                                <li><a href="acts.html">IGST Act 2017</a></li>
+                                                <li><a href="acts.html">RERA 2016</a></li>
+                                                <li><a href="acts.html">Maharashtra RERA</a></li>
+                                                <li><a href="acts.html">Insolvency & Bankruptcy Code</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="mega-column">
+                                            <h4><i class="fa-solid fa-file-invoice"></i> Forms</h4>
+                                            <ul style="font-size: 11px;">
+                                                <li><a href="forms.html#it-forms">Income Tax Forms</a></li>
+                                                <li><a href="forms.html#gst-forms">GST Forms</a></li>
+                                                <li><a href="forms.html#roc-forms">ROC Forms</a></li>
+                                                <li><a href="forms.html#roc-forms">LLP Forms</a></li>
+                                                <li><a href="forms.html#other-forms">FEMA Forms</a></li>
+                                                <li><a href="forms.html#other-forms">Wealth Tax Forms</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="blog.html" class="nav-item">Blog</a></li>
+                            <li><a href="contact.html" class="nav-item">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="nav-cta" style="margin-left:16px;">
+                        <a href="contact.html" class="btn btn-navy" style="padding: 10px 24px; border-radius: 999px;">Book Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Announcement Ticker -->
+        <!-- Announcement Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker-content">
+            📢 ITR Filing Deadline: July 31, 2025 &nbsp;|&nbsp; New GST Circular Released &nbsp;|&nbsp; Advance Tax Due: June 15, 2025 &nbsp;|&nbsp; Budget 2025 Highlights Available &nbsp;|&nbsp; Free ITR Camp — June 15 at Nanded Office → &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            📢 ITR Filing Deadline: July 31, 2025 &nbsp;|&nbsp; New GST Circular Released &nbsp;|&nbsp; Advance Tax Due: June 15, 2025 &nbsp;|&nbsp; Budget 2025 Highlights Available &nbsp;|&nbsp; Free ITR Camp — June 15 at Nanded Office → &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+    </div>
+                <!-- Mobile Drawer -->
+    <div class="nav-drawer">
+        <ul class="drawer-links">
+            <li><a href="index.html" class="drawer-item"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.html" class="drawer-item"><i class="fa-solid fa-users"></i> About</a></li>
+            <li><a href="services.html" class="drawer-item"><i class="fa-solid fa-briefcase"></i> Services</a></li>
+            <li><a href="knowledge-bank.html" class="drawer-item mobile-dropdown-btn"><i class="fa-solid fa-book-open"></i> Knowledge Bank <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="mobile-mega-menu">
+                    <li><a href="calculators.html">Calculators</a></li>
+                    <li><a href="bulletins.html">Bulletins</a></li>
+                    <li><a href="utilities.html">Utilities</a></li>
+                    <li><a href="acts.html">Acts</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                </ul>
+            </li>
+            <li><a href="blog.html" class="drawer-item"><i class="fa-solid fa-pen-nib"></i> Blog</a></li>
+            <li><a href="contact.html" class="drawer-item"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            <li class="drawer-cta-li"><a href="contact.html" class="btn btn-navy btn-block" style="border-radius: 999px;">Book Consultation</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="page-hero"><div class="page-hero-banner"><div class="breadcrumb"><a href="index.html">Home</a><span class="sep"><i class="fa-solid fa-chevron-right"></i></span><a href="knowledge-bank.html">Knowledge Bank</a><span class="sep"><i class="fa-solid fa-chevron-right"></i></span><span class="current">Calculators</span></div><h1 class="page-hero-title">Free Tax & GST Calculators</h1><p class="page-hero-subtitle">Instant estimates for GST, Income Tax, and TDS — updated for the latest rates and slabs. Always free to use.</p><span class="page-hero-bg-text">Calc</span></div></div>
+
+        <section class="reveal">
+            <div class="section-container">
+                <div class="text-center">
+                    <span class="section-tag">[ ✕ ] Tools</span>
+                    <h2 class="section-title title-center">Calculate instantly. Consult for precision.</h2>
+                    <p style="max-width:540px;margin:0 auto;font-size:14.5px;color:var(--color-muted);line-height:1.6;">These calculators provide indicative estimates for planning purposes. For accurate tax computation, consult our CA team.</p>
+                </div>
+
+                <div class="calculators-grid">
+
+                    <!-- GST Calculator -->
+                    <div class="calc-widget" id="gst-calc">
+                        <div class="calc-widget-header">
+                            <div class="calc-icon"><i class="fa-solid fa-receipt"></i></div>
+                            <div>
+                                <h3>GST Calculator</h3>
+                                <p>Compute GST on any amount</p>
+                            </div>
+                        </div>
+                        <form id="gst-calc-form">
+                            <div class="calc-field">
+                                <label class="calc-label" for="gst-amount">Amount (₹)</label>
+                                <input class="calc-input" type="number" id="gst-amount" placeholder="Enter amount" min="0" required>
+                            </div>
+                            <div class="calc-field">
+                                <label class="calc-label" for="gst-rate">GST Rate (%)</label>
+                                <select class="calc-select" id="gst-rate">
+                                    <option value="5">5% GST</option>
+                                    <option value="12">12% GST</option>
+                                    <option value="18" selected>18% GST</option>
+                                    <option value="28">28% GST</option>
+                                </select>
+                            </div>
+                            <div class="calc-field">
+                                <label class="calc-label" for="gst-type">Amount Type</label>
+                                <select class="calc-select" id="gst-type">
+                                    <option value="exclusive">Exclusive (Add GST)</option>
+                                    <option value="inclusive">Inclusive (Extract GST)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="calc-btn">Calculate GST</button>
+                        </form>
+                        <div class="calc-result" id="gst-result">
+                            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;">
+                                <div><div class="calc-result-label">Base Amount</div><div class="calc-result-value" id="gst-result-base" style="font-size:16px;">—</div></div>
+                                <div><div class="calc-result-label">GST Amount</div><div class="calc-result-value" id="gst-result-tax" style="font-size:16px;">—</div></div>
+                                <div><div class="calc-result-label">Total</div><div class="calc-result-value" id="gst-result-total" style="font-size:16px;">—</div></div>
+                            </div>
+                            <p class="calc-result-note" style="margin-top:10px;text-align:center;">Indicative estimate only. Consult our CA for precise computation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Income Tax Calculator -->
+                    <div class="calc-widget" id="tax-calc">
+                        <div class="calc-widget-header">
+                            <div class="calc-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                            <div>
+                                <h3>Income Tax Calculator</h3>
+                                <p>FY 2025-26 estimate</p>
+                            </div>
+                        </div>
+                        <form id="tax-calc-form">
+                            <div class="calc-field">
+                                <label class="calc-label" for="tax-income">Annual Income (₹)</label>
+                                <input class="calc-input" type="number" id="tax-income" placeholder="Enter gross income" min="0" required>
+                            </div>
+                            <div class="calc-field">
+                                <label class="calc-label" for="tax-regime">Tax Regime</label>
+                                <select class="calc-select" id="tax-regime">
+                                    <option value="new">New Regime (Default)</option>
+                                    <option value="old">Old Regime</option>
+                                </select>
+                            </div>
+                            <div class="calc-field" id="deductions-field" style="display:none;">
+                                <label class="calc-label" for="tax-deductions">Total Deductions under 80C,80D etc. (₹)</label>
+                                <input class="calc-input" type="number" id="tax-deductions" placeholder="e.g. 150000" min="0">
+                            </div>
+                            <button type="submit" class="calc-btn">Calculate Tax</button>
+                        </form>
+                        <div class="calc-result" id="tax-result">
+                            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center;">
+                                <div><div class="calc-result-label">Base Tax</div><div class="calc-result-value" id="tax-result-tax" style="font-size:16px;">—</div></div>
+                                <div><div class="calc-result-label">+ Health Cess</div><div class="calc-result-value" id="tax-result-cess" style="font-size:16px;">—</div></div>
+                                <div><div class="calc-result-label">Total Tax</div><div class="calc-result-value" id="tax-result-total" style="font-size:16px;">—</div></div>
+                            </div>
+                            <p class="calc-result-note" style="margin-top:10px;text-align:center;">Includes 4% health & education cess. Surcharge not included. Consult our CA for precise computation.</p>
+                        </div>
+                    </div>
+
+                    <!-- TDS Calculator -->
+                    <div class="calc-widget" id="tds-calc">
+                        <div class="calc-widget-header">
+                            <div class="calc-icon"><i class="fa-solid fa-percent"></i></div>
+                            <div>
+                                <h3>TDS Calculator</h3>
+                                <p>Quick TDS deduction estimate</p>
+                            </div>
+                        </div>
+                        <form id="tds-calc-form">
+                            <div class="calc-field">
+                                <label class="calc-label" for="tds-payment">Payment Amount (₹)</label>
+                                <input class="calc-input" type="number" id="tds-payment" placeholder="Enter gross payment" min="0" required>
+                            </div>
+                            <div class="calc-field">
+                                <label class="calc-label" for="tds-rate">TDS Rate (%)</label>
+                                <select class="calc-select" id="tds-rate">
+                                    <option value="1">1% – Property purchase (Sec 194C)</option>
+                                    <option value="2">2% – Contractors (Sec 194C)</option>
+                                    <option value="5">5% – Rent on Land/Building (194-IB)</option>
+                                    <option value="10" selected>10% – Salary/Professional Fee</option>
+                                    <option value="20">20% – Winnings / Default</option>
+                                    <option value="30">30% – Non-residents</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="calc-btn">Calculate TDS</button>
+                        </form>
+                        <div class="calc-result" id="tds-result">
+                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center;">
+                                <div><div class="calc-result-label">TDS Deducted</div><div class="calc-result-value" id="tds-result-tds">—</div></div>
+                                <div><div class="calc-result-label">Net Payment</div><div class="calc-result-value" id="tds-result-net">—</div></div>
+                            </div>
+                            <p class="calc-result-note" style="margin-top:10px;text-align:center;">Threshold limits and surcharge not factored. Use for estimate only.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disclaimer note -->
+                <div style="text-align:center;margin-top:40px;padding:20px;background:#FAF9F6;border-radius:12px;border:1px solid var(--color-border-light);">
+                    <p style="font-size:13px;color:var(--color-muted);max-width:700px;margin:0 auto;"><strong style="color:var(--color-dark);">Disclaimer:</strong> The calculators above are for indicative estimation purposes only. Actual tax liability may vary based on surcharge, rebates, applicable deductions, and other factors. Always consult our CA for accurate computation before making financial decisions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="typo-cta-section reveal"><span class="typo-cta-arrow">↗</span><h2 class="typo-cta-headline">Need more than estimates? Our CAs provide precise tax computation — <a href="contact.html" style="text-decoration:underline;text-underline-offset:6px;">get in touch.</a></h2></section>
+    </main>
+
+                <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="section-container" style="padding:0 24px;">
+                <div class="footer-grid-row">
+                    <div class="footer-brand">
+                        <h3 style="font-family:'Cormorant Garamond', serif; font-weight:700; font-size:26px;">Jinke & Associates</h3>
+                        <p style="margin: 10px 0 20px 0; font-size: 14px;">Taxes, Handled with Precision and Peace of Mind. In association with Pravin Chavan & Associates, CA India</p>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="income-tax.html">Income Tax</a></li>
+                            <li><a href="gst.html">GST Advisory</a></li>
+                            <li><a href="tax-planning.html">Tax Planning</a></li>
+                            <li><a href="business-reg.html">Business Reg.</a></li>
+                            <li><a href="nri-taxation.html">NRI Taxation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul class="footer-links-list">
+                            <li><a href="disclaimer.html" id="disclaimer-trigger">Disclaimer</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Office Contact</h4>
+                        <div class="footer-contact-info-list">
+                            <div class="footer-contact-item">
+                                <span>Pune Head Office</span>
+                                <a href="#">Jinke Tower, FC Road, Pune, Maharashtra 411004</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <span>Nanded Branch Office</span>
+                                <a href="#">Plot No. 24, Shilanagar Colony, Nanded, Maharashtra 431605</a>
+                            </div>
+                            <div class="footer-contact-item">
+                                <span>Support Email</span>
+                                <a href="mailto:query@jinkeassociates.com">query@jinkeassociates.com</a>
+                            </div>
+                        </div>
+                        <div class="footer-social-row">
+                            <a href="https://www.facebook.com/vijaykalaniandco" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/vrknco_ca/" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/groups/9185560" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="footer-social-circle" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="section-container bottom-flex-container" style="padding:0 24px;">
+                <p class="copyright-text">&copy; 2025. All Rights Reserved — Jinke & Associates, Nanded.</p>
+                <p class="disclaimer-footer-note" style="font-size:12px; color:rgba(255,255,255,0.5);">Co-brand: In association with Pravin Chavan & Associates, CA India</p>
+            </div>
+        </div>
+    </footer>
+</div>
+    <!-- Disclaimer Modal Overlay Popup -->
+        <!-- Disclaimer Modal Overlay Popup -->
+    <div class="modal-overlay" id="disclaimer-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <h3>Disclaimer & Terms</h3>
+            <p>
+                As per the rules of the Institute of Chartered Accountants of India (ICAI), we are not permitted to advertise or solicit work. The information provided in this website is solely for informational purposes and should not be construed as solicitation or advertisement.
+            </p>
+            <p>
+                By viewing this site, you acknowledge that you are seeking information about Jinke & Associates of your own accord and no form of solicitation has taken place.
+            </p>
+            <button class="btn btn-navy btn-close-modal">I Understand</button>
+        </div>
+    </div>
+    </div>
+
+        <!-- Floating Action Buttons -->
+        <!-- Floating Action Buttons -->
+    <div class="fab-container">
+        <!-- WhatsApp Tooltip Bubble -->
+        <div id="wa-tooltip">
+            <button id="wa-tooltip-close" aria-label="Close">&times;</button>
+            <p>Hi! Need help with taxes? 👋 Chat with us on WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/912462298101?text=Hello%20Jinke%20%26%20Associates%2C%20I%20would%20like%20to%20enquire%20about%20your%20tax%20services." target="_blank" rel="noopener noreferrer" class="fab-btn fab-whatsapp" aria-label="WhatsApp Us">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+912462298101" class="fab-btn fab-call" aria-label="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <button class="fab-btn fab-scroll-top" aria-label="Scroll to Top">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

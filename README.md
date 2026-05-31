@@ -27,17 +27,32 @@ Welcome to the premium, high-performance website for **Jinke & Associates | Tax 
 
 ```
 website/
-├── index.html       # Restructured semantic HTML5 tags and SVG brand assets
-├── styles.css       # Premium CSS custom properties, cards styling, and media queries
-├── script.js        # Showcase tab triggers, scroll fill timelines, and modal overlays
-├── README.md        # Documentation and deployment guide
-└── images/          # Professional high-definition stock images folder
-    ├── hero_bg.jpg            # Corporate meeting background
-    ├── about_bg.jpg           # Audit consultation background
-    ├── team_collaboration.jpg  # Experts teamwork visual
-    ├── testimonial_avatar.jpg # SME Client avatar image
-    ├── service_1.jpg to service_6.jpg # Dedicated service visuals
-    └── logo.webp              # Webp mockup representation logo
+├── index.html              # Home (landing page)
+├── about.html              # About Us & Expert Team
+├── services.html           # Services Overview Grid
+│   ├── income-tax.html     # Income Tax Filing details
+│   ├── gst.html            # GST Advisory & Returns
+│   ├── tax-planning.html   # Strategic Tax Planning
+│   ├── business-reg.html   # Company Incorporation & LLPs
+│   ├── accounting.html     # Bookkeeping & Payroll
+│   └── nri-taxation.html   # NRI Taxation & FEMA
+├── knowledge-bank.html     # Resource hub landing page
+│   ├── calculators.html    # Live GST, Tax, and TDS Calculators
+│   ├── bulletins.html      # Filterable regulatory updates
+│   ├── utilities.html      # Tabbed TDS rates & tax slabs
+│   ├── acts.html           # Reference legislative acts
+│   └── forms.html          # Curated downloads index
+├── blog.html               # Article listings with categories
+│   └── post-template.html  # Full article typography template
+├── events.html             # Upcoming workshops & webinars
+├── testimonials.html       # Client reviews grid
+├── careers.html            # Open positions & job applications
+├── contact.html            # Contact office details & map
+├── disclaimer.html         # Full legal terms & ICAI disclaimers
+├── 404.html                # Custom animated error page
+├── styles.css              # Unified Protax design system stylesheet
+├── script.js               # Event handling, scroll reveals, tab swappers
+└── images/                 # Editorial Stock Assets
 ```
 
 ---
