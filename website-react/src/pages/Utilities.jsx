@@ -205,7 +205,7 @@ export default function Utilities() {
             <div className="utility-section active" id="it-slabs">
               <h3 style={{ fontSize: '22px', marginBottom: '8px' }}>Income Tax Slab Rates — FY 2025-26 (AY 2026-27)</h3>
               <p style={{ fontSize: '13.5px', color: 'var(--color-muted)', marginBottom: '20px' }}>For Individuals (Below 60 years) — Resident Indian</p>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '24px' }}>
+              <div className="form-row" style={{ gap: '24px', marginBottom: '24px' }}>
                 <div>
                   <h4 style={{ fontSize: '16px', marginBottom: '16px', fontWeight: 600 }}>New Regime (Default)</h4>
                   <div className="data-table-wrap">

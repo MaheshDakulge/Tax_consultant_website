@@ -183,7 +183,7 @@ export default function Contact() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="contact-form" noValidate>
-                    <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0' }}>
+                    <div className="form-row">
                       <div className="contact-form-group" style={{ marginBottom: '20px' }}>
                         <label className="contact-label" htmlFor="contact-name" style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-dark)', display: 'block', marginBottom: '8px' }}>
                           Full Name *
@@ -221,7 +221,7 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0' }}>
+                    <div className="form-row">
                       <div className="contact-form-group" style={{ marginBottom: '20px' }}>
                         <label className="contact-label" htmlFor="contact-phone" style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--color-dark)', display: 'block', marginBottom: '8px' }}>
                           Phone Number
