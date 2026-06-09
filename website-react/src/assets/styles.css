@@ -536,7 +536,7 @@ a {
     width: 320px;
     height: 100vh;
     background-color: var(--color-white);
-    z-index: 999;
+    z-index: 1005;
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.05);
     padding: 100px 32px 40px 32px;
     display: flex;
@@ -1950,8 +1950,8 @@ a {
     .navbar {
         height: 68px;
     }
-    .nav-menu, .nav-cta {
-        display: none;
+    .nav-menu, .nav-cta, .co-brand-text {
+        display: none !important;
     }
     .hamburger {
         display: flex;
@@ -3387,7 +3387,7 @@ a[href$=".html"]:not([target]) {
     background: rgba(15, 28, 46, 0.5);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    z-index: 998;
+    z-index: 1004;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
