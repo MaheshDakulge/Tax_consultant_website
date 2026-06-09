@@ -20,7 +20,7 @@ export default function About() {
               <img
                 src="/images/sofa_office.jpg"
                 alt="Jinke & Associates office reception"
-                style={{ width: '100%', borderRadius: '16px', objectFit: 'cover' }}
+                style={{ width: '100%', height: '360px', borderRadius: '16px', objectFit: 'cover' }}
                 loading="lazy"
               />
               <p className="about-description" style={{ fontSize: '12.5px', lineHeight: 1.4, color: 'var(--color-muted)', marginTop: '12px', textAlign: 'center', fontStyle: 'italic' }}>
